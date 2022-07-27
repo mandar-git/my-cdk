@@ -1,0 +1,23 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "CdkV1ProjStack": {
+        "id": "CdkV1ProjStack",
+        "path": "CdkV1ProjStack",
+        "children": {
+          "myBucket": {
+            "id": "myBucket",
+            "path": "CdkV1ProjStack/myBucket"
+          }
+        }
+      }
+    }
+  }
+}

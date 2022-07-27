@@ -1,0 +1,55 @@
+{
+  "version": "1.33.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdkV1ProjStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkV1ProjStack.template.json"
+      },
+      "metadata": {
+        "/CdkV1ProjStack/myBucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myBucket",
+            "trace": [
+              "new CdkV1ProjStack (C:\\Users\\dindo\\Desktop\\typescript\\cdk-v1-proj\\lib\\cdk-v1-proj-stack.ts:20:5)",
+              "Object.<anonymous> (C:\\Users\\dindo\\Desktop\\typescript\\cdk-v1-proj\\bin\\cdk-v1-proj.ts:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Module.m._compile (C:\\Users\\dindo\\AppData\\Roaming\\npm\\node_modules\\ts-node\\src\\index.ts:1597:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Object.require.extensions.<computed> [as .ts] (C:\\Users\\dindo\\AppData\\Roaming\\npm\\node_modules\\ts-node\\src\\index.ts:1600:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "phase4 (C:\\Users\\dindo\\AppData\\Roaming\\npm\\node_modules\\ts-node\\src\\bin.ts:579:12)",
+              "bootstrap (C:\\Users\\dindo\\AppData\\Roaming\\npm\\node_modules\\ts-node\\src\\bin.ts:85:10)",
+              "main (C:\\Users\\dindo\\AppData\\Roaming\\npm\\node_modules\\ts-node\\src\\bin.ts:54:10)",
+              "Object.<anonymous> (C:\\Users\\dindo\\AppData\\Roaming\\npm\\node_modules\\ts-node\\src\\bin.ts:729:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.33.0",
+      "@aws-cdk/cx-api": "1.33.0",
+      "@aws-cdk/cloud-assembly-schema": "1.33.0",
+      "jsii-runtime": "node.js/v16.15.1"
+    }
+  }
+}
