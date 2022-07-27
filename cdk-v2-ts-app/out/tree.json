@@ -1,0 +1,129 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "constructs.Construct",
+          "version": "10.1.57"
+        }
+      },
+      "CdkProjStack": {
+        "id": "CdkProjStack",
+        "path": "CdkProjStack",
+        "children": {
+          "ImageId": {
+            "id": "ImageId",
+            "path": "CdkProjStack/ImageId",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.28.1"
+            }
+          },
+          "IsBucketEmpty": {
+            "id": "IsBucketEmpty",
+            "path": "CdkProjStack/IsBucketEmpty",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnCondition",
+              "version": "2.28.1"
+            }
+          },
+          "myBucket": {
+            "id": "myBucket",
+            "path": "CdkProjStack/myBucket",
+            "children": {
+              "$Mappings": {
+                "id": "$Mappings",
+                "path": "CdkProjStack/myBucket/$Mappings",
+                "constructInfo": {
+                  "fqn": "constructs.Construct",
+                  "version": "10.1.57"
+                }
+              },
+              "ImageId": {
+                "id": "ImageId",
+                "path": "CdkProjStack/myBucket/ImageId",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnParameter",
+                  "version": "2.28.1"
+                }
+              },
+              "$Conditions": {
+                "id": "$Conditions",
+                "path": "CdkProjStack/myBucket/$Conditions",
+                "children": {
+                  "IsBucketEmpty": {
+                    "id": "IsBucketEmpty",
+                    "path": "CdkProjStack/myBucket/$Conditions/IsBucketEmpty",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnCondition",
+                      "version": "2.28.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "constructs.Construct",
+                  "version": "10.1.57"
+                }
+              },
+              "$Rules": {
+                "id": "$Rules",
+                "path": "CdkProjStack/myBucket/$Rules",
+                "constructInfo": {
+                  "fqn": "constructs.Construct",
+                  "version": "10.1.57"
+                }
+              },
+              "Bucket": {
+                "id": "Bucket",
+                "path": "CdkProjStack/myBucket/Bucket",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "bucketName": "my-sample-bucket"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3.CfnBucket",
+                  "version": "2.28.1"
+                }
+              },
+              "$Hooks": {
+                "id": "$Hooks",
+                "path": "CdkProjStack/myBucket/$Hooks",
+                "constructInfo": {
+                  "fqn": "constructs.Construct",
+                  "version": "10.1.57"
+                }
+              },
+              "$Ouputs": {
+                "id": "$Ouputs",
+                "path": "CdkProjStack/myBucket/$Ouputs",
+                "constructInfo": {
+                  "fqn": "constructs.Construct",
+                  "version": "10.1.57"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.cloudformation_include.CfnInclude",
+              "version": "2.28.1"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.28.1"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "aws-cdk-lib.App",
+      "version": "2.28.1"
+    }
+  }
+}

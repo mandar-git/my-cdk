@@ -1,0 +1,82 @@
+{
+  "version": "20.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdkProjStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CdkProjStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CdkProjStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkProjStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fb2fdcacdbd81dedb42ea3fec00d985ad0944853e7c8744e198f32203208b42c.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CdkProjStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CdkProjStack.assets"
+      ],
+      "metadata": {
+        "/CdkProjStack/myBucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myBucket"
+          }
+        ],
+        "/CdkProjStack/myBucket/ImageId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ImageId"
+          }
+        ],
+        "/CdkProjStack/myBucket/$Conditions/IsBucketEmpty": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsBucketEmpty"
+          }
+        ],
+        "/CdkProjStack/myBucket/Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Bucket"
+          }
+        ],
+        "/CdkProjStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CdkProjStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CdkProjStack"
+    }
+  }
+}
